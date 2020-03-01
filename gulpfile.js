@@ -30,16 +30,19 @@ let style = () => {
     .pipe(sass().on('error', sass.logError))
     // 3. pass the file through autoprifixer
     .pipe(autoprefixer())
+    // 4. intilizing sourcemaps
     .pipe(sourcemaps.init())
-    // 4. where do i save the compiled CSS ?
+    // 5. pass the files through sourcemaps ?
     .pipe(sourcemaps.write('.'))
+    // 6. where do i save the compiled CSS ?
     .pipe(gulp.dest('css'))
-    // 5. strem changes to all browsers
+    // 7. stream changes to all browsers
     .pipe(browserSync.stream());
 }
 
 let userref = () => {
-    return gulp.src('./*.html')
+    return gulp.src('./pages/*.html')
+    // .pipe(gulp.src('./pages/*.html'))
     .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
@@ -64,11 +67,12 @@ let userref = () => {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './dist'
         }
     });
     gulp.watch('./sass/**/*.scss', style);
-    // gulp.watch('./*html', userref);
+    gulp.watch('./pages/*.html', userref);
+    gulp.watch('./includes/*.html', userref);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 
