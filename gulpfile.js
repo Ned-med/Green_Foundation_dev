@@ -7,6 +7,7 @@ const cssnano = require('gulp-cssnano');
 const gulpIf = require('gulp-if');
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref');
+const fileinclude = require('gulp-file-include');
 
 
 //compile scss into css
@@ -39,14 +40,26 @@ let style = () => {
 
 let userref = () => {
     return gulp.src('./*.html')
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+    }))
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     // 3. pass the file through css minifier
     .pipe(gulpIf('*.css', cssnano()))
+    
     .pipe(gulp.dest('dist'));
 }
 
-
+// let fileincludes = () => {
+//     return gulp.src('./*.html')
+//     .pipe(fileinclude({
+//         prefix: '@@',
+//         basepath: '@file'
+//     }))
+//     .pipe(gulp.dest('dist'));
+// }
 
 function watch() {
     browserSync.init({
@@ -64,3 +77,4 @@ function watch() {
 exports.style = style;
 exports.watch = watch;
 exports.userref = userref;
+// exports.fileincludes = fileincludes;
