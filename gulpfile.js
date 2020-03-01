@@ -1,19 +1,56 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('gulp-cssnano');
+const gulpIf = require('gulp-if');
+const uglify = require('gulp-uglify');
+const useref = require('gulp-useref');
 
 
 //compile scss into css
-function style() {
+// function style() {
+//     // 1. where is my scss file
+//     return gulp.src('./sass/**/*.scss')
+//     // 2. pass the file through sass compiler
+//     .pipe(sass().on('error', sass.logError))
+//     // 3. where do i save the compiled CSS ?
+//     .pipe(gulp.dest('./css'))
+//     // 4. strem changes to all browsers
+//     .pipe(browserSync.stream());
+// }
+
+//compile scss into css
+let style = () => {
     // 1. where is my scss file
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('sass/**/*.scss')
     // 2. pass the file through sass compiler
     .pipe(sass().on('error', sass.logError))
-    // 3. where do i save the compiled CSS ?
-    .pipe(gulp.dest('./css'))
-    // 4. strem changes to all browsers
+    // 3. pass the file through autoprifixer
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.init())
+    // 4. where do i save the compiled CSS ?
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('css'))
+    // 5. strem changes to all browsers
     .pipe(browserSync.stream());
 }
+
+let userref = () => {
+    return gulp.src('./**/*.html')
+    .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    // 3. pass the file through css minifier
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest('dist'));
+}
+
+// let minjs = () => {
+//     return gulp.src('js/**/*.js')
+//     .pipe(uglify())
+//     .pipe(gulp.dest('js/dist'));
+// }
 
 function watch() {
     browserSync.init({
@@ -22,6 +59,8 @@ function watch() {
         }
     });
     gulp.watch('./sass/**/*.scss', style);
+    // gulp.watch('./*html', userref);
+    // gulp.watch('js/**/*.js', minjs);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 
@@ -29,3 +68,5 @@ function watch() {
 
 exports.style = style;
 exports.watch = watch;
+exports.userref = userref;
+// exports.minjs = minjs;

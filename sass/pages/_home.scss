@@ -1,0 +1,12 @@
+main {
+    display: grid;
+    grid-template-areas: "lgo nav";
+
+    h1 {
+        grid-area: "lgo";
+    }
+
+    ul {
+        grid-area: "nav";
+    }
+}

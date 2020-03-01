@@ -1,0 +1,2 @@
+main{display:grid;grid-template-areas:"a b"}main h1{grid-area:"a"}main ul{grid-area:"b"}
+/*# sourceMappingURL=styles.css.map */

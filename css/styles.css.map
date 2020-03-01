@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,KACE,aAAc,AACd,yBAA+B,CAAE,AACjC,QACE,aAAiB,CAAE,AACrB,QACE,aAAiB,CAAE","file":"styles.css","sourcesContent":["main {\n  display: grid;\n  grid-template-areas: \"lgo nav\"; }\n  main h1 {\n    grid-area: \"lgo\"; }\n  main ul {\n    grid-area: \"nav\"; }\n"]}
