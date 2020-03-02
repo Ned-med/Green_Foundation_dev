@@ -10,6 +10,7 @@ const useref = require('gulp-useref');
 const fileinclude = require('gulp-file-include');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
+const terser = require('gulp-terser');
 
 //compile scss into css
 // function style() {
@@ -49,7 +50,7 @@ let userref = () => {
             basepath: '@file'
         }))
         .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.js', terser()))
         // 3. pass the file through css minifier
         .pipe(gulpIf('*.css', cssnano()))
 

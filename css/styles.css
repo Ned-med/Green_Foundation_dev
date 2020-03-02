@@ -1,2 +1,7 @@
-main{display:grid;grid-template-areas:"a b"}main h1{grid-area:"a"}main ul{grid-area:"b"}
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  background-size: cover; }
+
 /*# sourceMappingURL=styles.css.map */
