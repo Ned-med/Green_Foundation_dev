@@ -8,7 +8,7 @@
     }
 
     &__logo {
-        height: 5rem;
+        height: 5.5rem;
     }
 
     .menu {
@@ -31,13 +31,22 @@
             margin: 1rem;
         }
 
+        &__item:nth-child(n+6) {
+            img{
+                width: 32px;
+
+            }
+        }
+
         &__link{
             &:link,
             &:visited{
                 display: inline-block;
+                font-size: 1.5rem;
                 font-weight: 300;
-                padding: 1rem 2rem;
+                padding: 1rem .5rem;
                 text-decoration: none;
+                color: $color-dark-grey;
                 span {
                     display: none;    
                 }
