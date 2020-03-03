@@ -1,3 +1,20 @@
+/*
+0 - 600px: phone
+600 - 900px: Tbalet portrait
+900 - 1200px Tablet Landscape
+[1200 - 1800] is where our normal style apply
+1800px + Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base typography > general layout + grid > page layout > components
+
+for media queries 1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -7,6 +24,15 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 90%; } }
 
 body {
   box-sizing: border-box;
