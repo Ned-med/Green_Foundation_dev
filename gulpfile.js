@@ -82,6 +82,7 @@ function watch() {
         }
     });
     gulp.watch('./sass/**/*.scss', style);
+    gulp.watch('./sass/**/*.scss', userref);
     gulp.watch('./pages/*.html', userref);
     gulp.watch('./includes/*.html', userref);
     gulp.watch('./**/*.html').on('change', browserSync.reload);

@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.mini.css">
     <title>Green Foundation</title>
-</head>
-<body>
-    <main>
-        <h1>LOGO</h1>
-        <ul>
-            <li>home</li>
-            <li>contact</li>
-            <li>projects</li>
-            <li>news</li>
-        </ul>
-    </main>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="navigation__logo-box">
+        <img
+          src="images/home/logo.png"
+          alt="green_foundation logo"
+          class="navigation__logo"
+        />
+      </div>
+      <div class="menu">
+        <input type="checkbox" class="menu__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="menu__button">
+          <span class="menu__icon">&nbsp;</span>
+        </label>
+
+        <div class="menu__background">&nbsp;</div>
+
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link"><span>01</span>Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link"><span>02</span>About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link"><span>03</span>News</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link"><span>04</span>Projects</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link"><span>05</span>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+ 
     <h1>Projects</h1>
      <footer></footer>
     <script src="js/main.min.js"></script>
