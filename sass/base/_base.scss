@@ -27,5 +27,10 @@ html {
 body {
     box-sizing: border-box;
     padding-top:3rem;
-    
+   
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }
