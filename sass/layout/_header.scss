@@ -1,10 +1,18 @@
 .header {
     display: grid;
     grid-template-columns: 10rem repeat(2, 1fr) 10rem;
-
+    @include responsive(tab-port) {
+        grid-template-columns: 10rem 1fr 10rem;
+        grid-row: repeat(2, 1fr);
+    }
     &__hero {
         grid-column: 2/3;
         padding-top: 5rem;
+
+        @include responsive (tab-port) {
+            grid-row: 1/2;
+            
+        }
     }
 
     &__img {
@@ -15,9 +23,18 @@
         z-index: -1;
         // height: 50rem;
         width: 50vw;
+
+        @include responsive(tab-port) {
+            position: static;
+            width: 100%;
+        }
     }
     &__img-box {
         grid-column: 3/4;
+        @include responsive (tab-port) {
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
     }
 
     

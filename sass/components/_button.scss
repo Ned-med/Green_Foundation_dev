@@ -11,6 +11,9 @@
         position: relative;
         border: none;
         cursor: pointer;
+        @include responsive(tab-port)  {
+            font-size: 3rem;
+         }
     }
 
     &:hover {
