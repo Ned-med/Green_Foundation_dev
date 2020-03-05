@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["styles.css"],"sourcesContent":["main {\n  display: grid;\n  grid-template-areas: \"lgo nav\"; }\n  main h1 {\n    grid-area: \"lgo\"; }\n  main ul {\n    grid-area: \"nav\";\n    background-color: #fff; }\n"],"file":"styles.css"}
+{"version":3,"names":[],"mappings":"","sources":["styles.css"],"sourcesContent":[""],"file":"styles.css"}

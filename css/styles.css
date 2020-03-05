@@ -1,10 +1,2 @@
-main {
-  display: grid;
-  grid-template-areas: "lgo nav"; }
-  main h1 {
-    grid-area: "lgo"; }
-  main ul {
-    grid-area: "nav";
-    background-color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */
