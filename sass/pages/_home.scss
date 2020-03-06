@@ -6,19 +6,22 @@
     background-color: $color-dark;
     position: relative;
     width: 100vw;
-
+    @include responsive(tab-port){
+        grid-template-rows: 80% 20% 1fr;
+    }
     .card-container {
         grid-area: 1/1/2/7;
         height: 25vh;
+
         @include responsive(tab-port) {
             display: flex;
             flex-direction: column;
             // justify-content: center;
             // align-content: center;
-            align-items: center;
+            // align-items: center;
             height: 100%;
             margin-top: -7.5rem;
-            
+
             // padding-left: 7.5rem;
         }
     }
@@ -56,10 +59,18 @@
         }
 
         @include responsive(tab-port) {
-            position: static;
-            margin:0 0 2rem 50rem;
-            width: 45rem;
-            
+            position: relative;
+            margin: 0 0 2rem 0rem;
+            width: 47rem;
+            // align-self: end;
+            height: 15rem;
+            top:0;
+            left: 50%;
+        }
+
+        @include responsive(phone) {
+            // margin: 0 0 2rem 25rem;
+            width: 41rem;
         }
 
         &__img {
@@ -94,6 +105,10 @@
             font-weight: $light-font-weight;
             padding: 0 25%;
         }
+
+        @include responsive(phone) {
+            height: 25rem;
+        }
     }
 
     .solution {
@@ -102,21 +117,34 @@
         justify-content: space-around;
         // flex-direction: column;
         margin: 0 auto 5rem auto;
+
         @include responsive(tab-port) {
-            margin: 0;
-            flex-direction: column;
+            margin: 5rem auto;
+            // flex-direction: column;
             // justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
+
+        @include responsive(phone) {
+            flex-direction: column;
+
+        }
+
         // padding: 0 5rem;
         &__img {
             width: 4rem;
+
+            @include responsive(tab-port) {
+                width: 6rem;
+            }
 
         }
 
         &__card {
             text-align: center;
             width: 25rem;
+            margin-bottom: 5rem;
         }
 
         &__des {
@@ -125,8 +153,9 @@
             font-weight: $light-font-weight;
             font-size: 1.2rem;
             text-align: justify;
+
             @include responsive(tab-port) {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
         }

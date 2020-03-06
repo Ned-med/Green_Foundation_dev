@@ -31,6 +31,12 @@ html {
   @media screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
+  @media screen and (max-width: 23.44em) {
+    html {
+      font-size: 39%; } }
   @media screen and (min-width: 112.5em) {
     html {
       font-size: 90%; } }
@@ -338,6 +344,9 @@ body {
   background-color: #3f3e40;
   position: relative;
   width: 100vw; }
+  @media screen and (max-width: 56.25em) {
+    .section-prob {
+      grid-template-rows: 80% 20% 1fr; } }
   .section-prob .card-container {
     grid-area: 1/1/2/7;
     height: 25vh; }
@@ -345,7 +354,6 @@ body {
       .section-prob .card-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
         height: 100%;
         margin-top: -7.5rem; } }
   .section-prob .card-prob {
@@ -370,9 +378,15 @@ body {
       transform: translateX(-50%); }
     @media screen and (max-width: 56.25em) {
       .section-prob .card-prob {
-        position: static;
-        margin: 0 0 2rem 50rem;
-        width: 45rem; } }
+        position: relative;
+        margin: 0 0 2rem 0rem;
+        width: 47rem;
+        height: 15rem;
+        top: 0;
+        left: 50%; } }
+    @media screen and (max-width: 37.5em) {
+      .section-prob .card-prob {
+        width: 41rem; } }
     .section-prob .card-prob__img {
       width: 4rem; }
     .section-prob .card-prob__heading {
@@ -394,6 +408,9 @@ body {
     .section-prob__heading .heading-desc {
       font-weight: 300;
       padding: 0 25%; }
+    @media screen and (max-width: 37.5em) {
+      .section-prob__heading {
+        height: 25rem; } }
   .section-prob .solution {
     grid-area: 3 / 2 / 4 / 6;
     display: flex;
@@ -401,14 +418,21 @@ body {
     margin: 0 auto 5rem auto; }
     @media screen and (max-width: 56.25em) {
       .section-prob .solution {
-        margin: 0;
-        flex-direction: column;
-        align-items: center; } }
+        margin: 5rem auto;
+        align-items: center;
+        flex-wrap: wrap; } }
+    @media screen and (max-width: 37.5em) {
+      .section-prob .solution {
+        flex-direction: column; } }
     .section-prob .solution__img {
       width: 4rem; }
+      @media screen and (max-width: 56.25em) {
+        .section-prob .solution__img {
+          width: 6rem; } }
     .section-prob .solution__card {
       text-align: center;
-      width: 25rem; }
+      width: 25rem;
+      margin-bottom: 5rem; }
     .section-prob .solution__des {
       color: #fff;
       padding: 0 20%;
@@ -417,6 +441,6 @@ body {
       text-align: justify; }
       @media screen and (max-width: 56.25em) {
         .section-prob .solution__des {
-          font-size: 1.5rem; } }
+          font-size: 2rem; } }
 
 /*# sourceMappingURL=styles.css.map */

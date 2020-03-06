@@ -20,6 +20,11 @@ ORDER: base typography > general layout + grid > page layout > components
 for media queries 1em = 16px
 */
 @mixin responsive($breakpoint) {
+
+    @if $breakpoint == iphone {
+        @media screen and (max-width: 23.44em) { @content }; //375px
+     }
+     
     @if $breakpoint == phone {
         @media screen and (max-width: 37.5em) { @content }; //600px
     }
