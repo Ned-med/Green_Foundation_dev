@@ -7,7 +7,7 @@
         padding: .5rem 2.5rem;
         display: inline-block;
         transition: all .2s;
-        font-size: $default-font-size;
+        font-size: 1.3rem;
         position: relative;
         border: none;
         cursor: pointer;
@@ -52,11 +52,53 @@
         border-radius: .5rem;
         }
     }
+    
+
+    &__urgent {
+        &-icon {
+            width: 1rem;
+        }
+        font-size: 1rem !important;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    &__cause {
+        border-radius: 10rem;
+        &::after {
+            border-radius: 10rem;
+            }
+    }
+
     &--dark {
         background-color: $color-dark;
         color: $color-white;
         &::after {
             background-color: $color-dark;
+        }
+    }
+
+    &--red {
+        background-color: $color-red;
+        color: $color-white;
+        &::after {
+            background-color: $color-red;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
+    &--yellow {
+        background-color: $color-yellow;
+        color: $color-white;
+        &::after {
+            background-color: $color-yellow;
         }
     }
 
