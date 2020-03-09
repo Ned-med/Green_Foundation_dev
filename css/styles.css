@@ -157,11 +157,23 @@ body {
   .btn__cause::after {
     border-radius: 10rem; }
 
+.btn__about {
+  border-radius: 10rem;
+  margin: 0 auto; }
+  .btn__about::after {
+    border-radius: 10rem; }
+
 .btn__donation {
-  width: 13rem;
+  width: 100%;
   border-radius: 10rem;
   margin: .5rem;
   text-align: center; }
+  @media screen and (min-width: 112.5em) {
+    .btn__donation {
+      width: 14.5rem; } }
+  @media screen and (max-width: 56.25em) {
+    .btn__donation {
+      width: 100%; } }
   .btn__donation::after {
     border-radius: 10rem; }
 
@@ -616,10 +628,20 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-content: center; }
+  @media screen and (max-width: 56.25em) {
+    .donation {
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: auto;
+      padding: 5rem 6rem; } }
   .donation__heading {
     width: 15rem;
     line-height: 1.2;
     color: #fff; }
+    @media screen and (max-width: 56.25em) {
+      .donation__heading {
+        width: 100%;
+        font-size: 3rem;
+        text-align: center; } }
     .donation__heading--main {
       font-weight: 400; }
     .donation__heading--sub {
@@ -630,7 +652,14 @@ body {
     background-color: rgba(91, 91, 89, 0.47);
     border: none;
     outline: none;
-    color: #fff; }
+    color: #fff;
+    width: 100%; }
+    @media screen and (min-width: 112.5em) {
+      .donation__input {
+        width: auto; } }
+    @media screen and (max-width: 56.25em) {
+      .donation__input {
+        width: 100%; } }
     .donation__input::-webkit-input-placeholder {
       text-transform: uppercase;
       font-weight: 500; }
@@ -651,11 +680,88 @@ body {
       font-weight: 700; }
   .donation__description {
     width: 15rem;
-    line-height: 1.3; }
+    line-height: 1.3;
+    margin: 0 auto; }
+    @media screen and (max-width: 56.25em) {
+      .donation__description {
+        text-align: center;
+        width: 100%;
+        align-self: center;
+        justify-self: center; } }
     .donation__description--1 {
       margin-bottom: .5rem;
       color: #fff; }
     .donation__description--2 {
       color: #00b9a2; }
+
+.about {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 6rem 4rem; }
+  .about-header {
+    grid-row: 1/2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .about__img {
+    display: inline-block;
+    width: 30rem;
+    height: 27rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 1rem 3.5rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px; }
+    .about__img--1 {
+      background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/team-1.jpg"); }
+    .about__img--2 {
+      background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/square-6.jpg"); }
+    .about__img-title {
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 300; }
+    .about__img-countary {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 700; }
+  .about__heading {
+    width: 40%;
+    font-size: 3rem;
+    text-align: end;
+    color: #727475;
+    font-weight: 700; }
+  .about__features {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem 4rem 0rem 4rem; }
+    .about__features-container-1 {
+      width: 50%;
+      display: flex; }
+    .about__features-container-2 {
+      width: 50%;
+      display: flex; }
+    .about__features-icon {
+      width: 7rem; }
+    .about__features-text {
+      width: 70%;
+      margin: 1.5rem 0 0 2rem; }
+    .about__features-description {
+      margin-bottom: 2rem;
+      color: #727475; }
+    .about__features-btn, .about__features-btn:visited {
+      text-decoration: none;
+      color: #3f3e40;
+      font-weight: 500;
+      cursor: pointer; }
+    .about__features--2 {
+      padding: 0rem 4rem; }
 
 /*# sourceMappingURL=styles.css.map */

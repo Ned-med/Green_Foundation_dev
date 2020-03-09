@@ -1,3 +1,6 @@
+//*********************************************************//
+//Section Problem
+//*********************************************************//
 .section-prob {
     display: grid;
     grid-template-columns: 10rem repeat(4, 1fr) 10rem;
@@ -166,7 +169,7 @@
 }
 
 //*********************************************************//
-                    //Section Causes
+//Section Causes
 //*********************************************************//
 .causes {
     padding: 2rem 5rem;
@@ -199,11 +202,13 @@
         box-shadow: $Second-shadow;
         border-radius: 3px;
         overflow: hidden;
+
         &-top {
             position: relative;
             height: 20rem;
             background-repeat: no-repeat;
             background-size: cover;
+
             &::before {
                 content: "";
                 display: block;
@@ -213,22 +218,25 @@
 
             &--1 {
                 background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/cause-1.jpg");
+
                 &::before {
                     width: 24%;
                     border-bottom: 5px solid $color-primary;
                 }
             }
 
-            &--2{
+            &--2 {
                 background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/cause-2.jpg");
+
                 &::before {
                     width: 42%;
                     border-bottom: 5px solid $color-yellow;
                 }
             }
 
-            &--3{
+            &--3 {
                 background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/cause-3.jpg");
+
                 &::before {
                     width: 19%;
                     border-bottom: 5px solid $color-red;
@@ -256,6 +264,7 @@
             bottom: -2rem;
             font-size: 1.1rem;
             font-weight: $medium-font-weight;
+
             &--1 {
                 background-color: $color-primary;
                 left: 24%;
@@ -284,18 +293,20 @@
             color: $color-dark;
 
         }
-        
-        
+
+
         &-details {
-            &-icon{
+            &-icon {
                 width: 1rem;
             }
+
             &-text {
                 font-size: 1.2rem;
                 font-weight: $light-font-weight;
                 color: $color-dark-grey;
                 margin-bottom: 2rem;
             }
+
             &-description {
                 font-size: 1.4rem;
                 font-weight: $light-font-weight;
@@ -308,7 +319,7 @@
 
 
 //*********************************************************//
-                    //Donation Section
+//Donation Section
 //*********************************************************//
 
 .donation {
@@ -320,11 +331,24 @@
     // grid-template-columns: repeat(auto-fit, minmax(30rem,  1fr));
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
+    @include responsive(tab-port) {
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: auto;
+        padding: 5rem 6rem;
+    }
+
     &__heading {
         width: 15rem;
         line-height: 1.2;
         color: $color-white;
-        &--main{
+
+        @include responsive(tab-port) {
+            width: 100%;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        &--main {
             font-weight: $regular-font-weight;
         }
 
@@ -332,6 +356,7 @@
             font-weight: $light-font-weight;
         }
     }
+
     &__input {
         padding: 1rem 2rem;
         margin: .5rem;
@@ -339,26 +364,150 @@
         border: none;
         outline: none;
         color: $color-white;
-        &::placeholder{
+        width: 100%;
+        
+        @include responsive(big-desktop) {
+            width: auto;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
+        &::placeholder {
             // color: $color-white;
             text-transform: uppercase;
             font-weight: $medium-font-weight;
         }
-       
-        &:focus{
+
+        &:focus {
             color: $color-white;
             font-weight: $bold-font-weight
         }
     }
-    &__description{
+
+    &__description {
         width: 15rem;
         line-height: 1.3;
-        &--1{
+        margin: 0 auto;
+        @include responsive(tab-port) {
+            text-align: center;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+        &--1 {
             margin-bottom: .5rem;
             color: $color-white;
         }
-        &--2{
+
+        &--2 {
             color: $color-primary;
+        }
+    }
+}
+
+//*********************************************************//
+//Section about
+//*********************************************************//
+
+.about {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 6rem 4rem;
+
+    &-header {
+        grid-row: 1/2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__img {
+        display: inline-block;
+        // width: 25%;
+        // height: 50%;
+        width: 30rem;
+        height: 27rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        box-shadow: $Second-shadow;
+        border-radius: 3px;
+        &--1 {
+            background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/team-1.jpg");
+        }
+
+        &--2 {
+            background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/square-6.jpg");
+        }
+
+        &-title{
+            position: absolute;
+            bottom: 5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: $color-white;
+            font-weight: $light-font-weight;
+        }
+
+        &-countary {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: $color-white;
+            font-weight: $bold-font-weight;
+        }
+    }
+
+    &__heading {
+        width: 40%;
+        font-size: 3rem;
+        text-align: end;
+        color: $color-dark-grey;
+        font-weight: $bold-font-weight;
+    }
+
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.5rem 4rem 0rem 4rem;
+        &-container-1 {
+            width: 50%;
+            display: flex;
+        }
+
+        &-container-2 {
+            width: 50%;
+            display: flex;
+        }
+        &-icon {
+           width:7rem
+        }
+
+        &-text {
+            width: 70%;
+            margin: 1.5rem 0 0 2rem;
+        }
+
+        &-description {
+            margin-bottom: 2rem;
+            color: $color-dark-grey;
+        }
+        &-btn {
+            &,
+            &:visited {
+                text-decoration: none;
+                color: $color-dark;
+                font-weight: $medium-font-weight;
+                cursor: pointer;
+            }
+        }
+
+        &--2 {
+            padding: 0rem 4rem;
         }
     }
 }

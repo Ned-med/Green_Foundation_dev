@@ -70,11 +70,26 @@
             }
     }
 
+    &__about {
+        border-radius: 10rem;
+        margin: 0 auto;
+        &::after {
+            border-radius: 10rem;
+            }
+    }
+
     &__donation {
-        width: 13rem;
+        width: 100%;
         border-radius: 10rem;
         margin: .5rem;
         text-align: center;
+        @include responsive(big-desktop) {
+            width: 14.5rem;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
         &::after {
             border-radius: 10rem;
             }
