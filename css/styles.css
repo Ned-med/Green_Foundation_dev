@@ -177,6 +177,13 @@ body {
   .btn__donation::after {
     border-radius: 10rem; }
 
+.btn__footer {
+  width: 50%;
+  text-align: center; }
+  @media screen and (min-width: 112.5em) {
+    .btn__footer {
+      width: 25%; } }
+
 .btn--dark {
   background-color: #3f3e40;
   color: #fff; }
@@ -429,7 +436,87 @@ body {
 .footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  padding: 4rem 8rem;
+  background-image: url("../images/home/parallax-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 56.25em) {
+    .footer {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(4, 1fr); } }
+  .footer__space {
+    height: 1.5rem; }
+  .footer__logo {
+    width: 5rem; }
+  .footer__description {
+    width: 73%;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 1.3rem; }
+  .footer__partners-title {
+    color: #fff; }
+  .footer__partners-img {
+    width: 7rem; }
+  .footer__options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    @media screen and (max-width: 56.25em) {
+      .footer__options {
+        flex-direction: column; } }
+  .footer__option {
+    width: 30rem;
+    display: flex;
+    margin-top: 2rem; }
+    .footer__option-img {
+      display: block;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 2rem; }
+    .footer__option-text {
+      color: #fff; }
+  .footer__newsletter {
+    align-self: center; }
+    .footer__newsletter-heading {
+      color: #fff; }
+    .footer__newsletter-input {
+      padding: 1.1rem 2rem;
+      background-color: rgba(91, 91, 89, 0.47);
+      border: none;
+      outline: none;
+      color: #fff;
+      width: 50%; }
+      @media screen and (min-width: 112.5em) {
+        .footer__newsletter-input {
+          width: 25%; } }
+      .footer__newsletter-input::-webkit-input-placeholder {
+        text-transform: uppercase;
+        font-weight: 300; }
+      .footer__newsletter-input::-moz-placeholder {
+        text-transform: uppercase;
+        font-weight: 300; }
+      .footer__newsletter-input:-ms-input-placeholder {
+        text-transform: uppercase;
+        font-weight: 300; }
+      .footer__newsletter-input::-ms-input-placeholder {
+        text-transform: uppercase;
+        font-weight: 300; }
+      .footer__newsletter-input::placeholder {
+        text-transform: uppercase;
+        font-weight: 300; }
+      .footer__newsletter-input:focus {
+        color: #fff;
+        font-weight: 700; }
+
+.sub-footer {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .sub-footer__copytight {
+    color: #a3a3a3; }
 
 .section-prob {
   display: grid;

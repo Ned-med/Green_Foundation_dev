@@ -2,4 +2,80 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    // grid-gap: 2rem;
+    grid-column-gap: 2rem;
+    padding: 4rem 8rem ;
+    background-image: url("../images/home/parallax-7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+@include responsive(tab-port) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+    &__space {
+        height: 1.5rem;
+    }
+    &__logo {
+        width: 5rem;
+    }
+    &__description {
+        width: 73%;
+        color: $color-light-grey;
+        font-weight: $light-font-weight;
+        font-size: 1.3rem;
+
+    }
+    &__partners {
+        &-title{
+            color: $color-white;
+        }
+        &-img {
+            width: 7rem;
+        }
+    }
+    &__options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include responsive(tab-port) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &__option {
+        width: 30rem;
+        display: flex;
+       margin-top: 2rem;
+        &-img {
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 2rem;
+        }
+        &-text {
+            color: $color-white;
+        }
+    }
+    &__newsletter {
+        align-self: center;
+        &-heading{
+            color: $color-white;
+        }
+        &-input{
+            @include placeholder;
+        }
+    }
+}
+
+.sub-footer {
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__copytight{
+        color: $color-light-grey;
+    }
 }

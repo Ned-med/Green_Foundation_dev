@@ -95,6 +95,14 @@
             }
     }
 
+    &__footer {
+        width: 50%;
+        text-align: center;
+        @include responsive(big-desktop) {
+            width: 25%;
+        }
+    }
+
     &--dark {
         background-color: $color-dark;
         color: $color-white;

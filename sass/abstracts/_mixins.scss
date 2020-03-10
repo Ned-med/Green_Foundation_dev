@@ -57,3 +57,31 @@ for media queries 1em = 16px
 @mixin transform($params) {
     @include css3-prefix('transform', $params);
 }
+
+@mixin placeholder {
+    padding: 1.1rem 2rem;
+    // margin: .5rem;
+    background-color: rgba(91, 91, 89, .47);
+    border: none;
+    outline: none;
+    color: $color-white;
+    width: 50%;
+    
+    @include responsive(big-desktop) {
+        width: 25%;
+    }
+
+    // @include responsive(tab-port) {
+    //     width: 100%;
+    // }
+    &::placeholder {
+        // color: $color-white;
+        text-transform: uppercase;
+        font-weight: $light-font-weight;
+    }
+
+    &:focus {
+        color: $color-white;
+        font-weight: $bold-font-weight
+    }
+}
