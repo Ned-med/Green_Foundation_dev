@@ -1,27 +1,19 @@
 /**********************************************jumbotron**************************************/
 #jumbotron{
-    background-color: #000;
-    height: 150px;
-    background: #000;
+    height: 250px;
+    background-image: url(../images/about/cause-2.jpg);
+    background-repeat: no-repeat;
     background-size: 100%;
     padding: 100px;
     overflow: hidden;
 }
 
-#jumbotron h2{
+#jumbotron h1{
     text-align: center;
-    margin-top: 0px;
+    margin-top: 40px;
     color:#fff;
-    text-shadow: 2px 2px 8px #fff;
-    font-size: 48pt;
-    font-family: calibri;
-}
-#jumbotron h3{
-    text-align: center;
-    margin-top: 0px;
-    color:#fff;
-    text-shadow: 2px 2px 8px #fff;
-    font-size: 48pt;
+    /* text-shadow: 2px 2px 8px #fff; */
+    font-size: 60pt;
     font-family: calibri;
 }
  /* //////////////////////////////////////top.container////////////////////// */
@@ -71,26 +63,27 @@
     font-weight: 700;
     transition: 1s;
 }
+
 .top-container .box:nth-child(1) .icon{
-    box-shadow: 0 0 0 0 #e91e63;
-    background: #e91e63;
+    box-shadow: 0 0 0 0#0081bf;
+    background: #0081bf;
 }
 .top-container .box:nth-child(1):hover .icon{
-    box-shadow: 0 0 0 400px #e91e63;
+    box-shadow: 0 0 0 400px #0081bf;
 }
 .top-container .box:nth-child(2) .icon{
-    box-shadow: 0 0 0 0 #23e629;
-    background: #23e629;
+    box-shadow: 0 0 0 0 #eec84c;
+    background: #eec84c;
 }
 .top-container .box:nth-child(2):hover .icon{
-    box-shadow: 0 0 0 400px #23e629;
+    box-shadow: 0 0 0 400px #eec84c;
 }
 .top-container .box:nth-child(3) .icon{
-    box-shadow: 0 0 0 0 #2196f3;
-    background: #2196f3;
+    box-shadow: 0 0 0 0 #d45342;
+    background: #d45342;
 }
 .top-container .box:nth-child(3):hover .icon{
-    box-shadow: 0 0 0 400px #2196f3;
+    box-shadow: 0 0 0 400px #d45342;
 }
 .top-container .box .content{
     position: relative;
@@ -112,7 +105,6 @@
 .top-container .box .content a{
     display: inline-block;
     padding: 10px 20px;
-    background: #fff;
     border-radius: 4px;
     text-decoration: none;
     color: #000;
@@ -120,13 +112,35 @@
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
+.top-container .box:nth-child(1) .btn1{
+    
+    background: #0081bf;
+}
+.top-container .box:nth-child(1):hover .btn1{
+    background-color:  #fff;
+}
+.top-container .box:nth-child(2) .btn2{
+    
+    background: #eec84c;
+}
+.top-container .box:nth-child(2):hover .btn2{
+    background-color:  #fff;
+}
+.top-container .box:nth-child(3) .btn3{
+    
+    background: #d45342;
+}
+.top-container .box:nth-child(3):hover .btn3{
+    background-color:  #fff;
+}
  /* //////////////////////////////////////Annual Rapport////////////////////// */
+
  .article .titre{
     text-align: center;
     background:#3f3e40;
 }
 .article .titre h2{
-    color: rgb(69, 170, 86);
+    color: #fff;
     font-size: 50px;
 
 }
@@ -135,7 +149,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    position: absolute;
+    position: relative;
+
     
     
     
@@ -213,3 +228,148 @@
     margin: 10px 0 0;
     padding: 0;
 }
+/****************************************************slider de staf******************************************************/
+.slider {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}.swiper-container {
+    width: 100%;
+  }
+  .swiper-container .titre2{
+    text-align: center;
+    background:#3f3e40;
+}
+.swiper-container .titre2 h2{
+    color: #fff;
+    font-size: 50px;
+
+}
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 380px;
+    background: #fff;
+
+  }
+  .swiper-slide .imgbx2{
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+  }
+  .swiper-slide .imgbx2 img{
+      width: 100%;
+  }
+  .swiper-slide .details2{
+      box-sizing: border-box;
+      font-size: 20px;
+      padding: 20px;
+  }
+  .swiper-slide .details2 h3{
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      text-align: center;
+      line-height: 20px;
+  }
+  .swiper-slide .details2 h3 span{
+      font-size: 16px;
+      color: #f44336;
+  }
+  /******************************************partener************************************/
+  .wrapper {
+    margin-top: 40px;
+	width: 100%;
+    overflow: hidden;
+    background: #3f3e40;
+}
+.photobanner {
+	position: relative;
+	height: 100px;
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.photobanner img {
+  margin: 0px 25px;
+}
+ .photobanner {
+  animation: bannermove 20s linear infinite alternate-reverse;
+    }
+
+@media(max-width:600px){
+
+   
+    @keyframes bannermove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: -680px;
+        }
+    }
+    .photobanner {
+        height: 70px;
+        width: 50px;
+    }
+    .top-container{
+        margin-left: 80px;
+    }
+    /* #jumbotron{
+        height: 50px;
+
+    } */
+    #jumbotron h1{
+        font-size: 33pt;
+        
+    }
+    .top-container{
+       align-items: center;
+       margin: 0 auto;
+    }
+    .top-container .box{
+         align-items: center;
+        margin: 0 auto;
+    }
+  }
+  @media(max-width:900px){
+
+   
+    @keyframes bannermove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: -400px;
+        }
+    }
+    .top-container{
+        align-items: center;
+        margin: 0 auto;
+     }
+     .top-container .box{
+          align-items: center;
+         margin: 0 auto;
+        }
+    .top-container .box{
+        width: 300px;
+        margin-top: 20px;
+    }
+    .swiper-slide .imgbx2{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .swiper-slide {
+        
+        width: 200px;
+        height: 280px;
+        
+    
+      }
+      .article .container .box{
+          width: 300px;
+          height: 300px;
+      }
+  }

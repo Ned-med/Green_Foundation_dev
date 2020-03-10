@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.mini.css">
+    
     <title>Green Foundation</title>
 </head>
 <body>
@@ -19,6 +21,25 @@
     <h1>contact</h1>
      <footer></footer>
     <script src="js/main.min.js"></script>
+<script src="vendor/swiper/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
     </body>
     </html>
 

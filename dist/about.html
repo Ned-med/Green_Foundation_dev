@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.mini.css">
+    
     <title>Green Foundation</title>
 </head>
 <body>
@@ -18,9 +20,8 @@
     </main>
     <!--------------------------------------jumbotron-------------------------------------------->
     <div id="jumbotron">
-        <h2>About-Us</h2>
-        <h3>Home / About-Us</h3>
-      </div>
+        <h1>About-Us</h1>
+    </div>
 <!-- ---------------------------------------Top-container------------------------------------------ -->
 
 <div class="top-container">
@@ -152,9 +153,122 @@
     
   </div>
 </div>
+<!-----------------------------------------------------slider de staf---------------------------------------------->
+<div class="slider">
+  <div class="swiper-container">
+    <div class="titre2">
+      <h2>Staff</h2>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge1.jpeg" style="height: 100%;">
+        </div>
+        <div class="details2">
+          <h3>Rose<br><span>canadienne</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge2.jpg">
+        </div>
+        <div class="details2">
+          <h3>stifan<br><span>espagnole</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge3.jpg">
+        </div>
+        <div class="details2">
+          <h3>Jordi<br><span>espagnole</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge4.png">
+        </div>
+        <div class="details2">
+          <h3>Sami<br><span>italienne</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge5.jpg">
+        </div>
+        <div class="details2">
+          <h3>Camillia<br><span>americain</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge6.jpg">
+        </div>
+        <div class="details2">
+          <h3>Nadir<br><span>Turque</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge7.jpg">
+        </div>
+        <div class="details2">
+          <h3>Abasse<br><span>marocain</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge8.jpg">
+        </div>
+        <div class="details2">
+          <h3>Manuel<br><span>germany</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgbx2">
+          <img src="images/about/imge9.jpg">
+        </div>
+        <div class="details2">
+          <h3>Sara<br><span>germany</span></h3>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- ---------------------------------partener---------------------------------------- -->
+<div class="partener">
+  <div class="wrapper">
+    <div class="photobanner">
+  <img class="first" src="images/about/partner-4.png" alt="" />
+  <img src="images/about/partner-5.png " alt="" />
+  <img src="images/about/partner-3.png " alt="" />
+  <img src="images/about/partner-2.png" alt="" />
+  <img src="images/about/partner-1.png " alt="" />
+  </div>
+  </div>
+</div>
+
 
      <footer></footer>
     <script src="js/main.min.js"></script>
+<script src="vendor/swiper/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
     </body>
     </html>
 
