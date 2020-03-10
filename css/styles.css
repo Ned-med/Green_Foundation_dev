@@ -426,6 +426,11 @@ body {
         grid-column: 1/4;
         grid-row: 2/3; } }
 
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+
 .section-prob {
   display: grid;
   grid-template-columns: 10rem repeat(4, 1fr) 10rem;

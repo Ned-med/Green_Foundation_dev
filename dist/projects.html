@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.mini.css">
     <title>Green Foundation</title>
   </head>
@@ -110,7 +111,80 @@
 </html>
 
     <h1>Projects</h1>
-     <footer></footer>
+     
+  <!-- Section "Footer" Start -->
+  <footer class="footer">
+    <div class="footer__about">
+      <img
+        src="images/home/Logo-white.png"
+        alt="Footer Logo"
+        class="footer__logo"
+      />
+      <p class="footer__description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa maiores
+        eaque sunt. Praesentium beatae culpa sapiente? Nihil commodi aspernatur
+        unde laboriosam eaque.
+      </p>
+    </div>
+    <div class="footer__partners">
+      <h3 class="footer__partners-title">OUR PARTNERS</h3>
+      <img src="images/home/partner-1.png" alt="unite partner" class="footer_partners-img" />
+      <img src="images/home/partner-2.png" alt="hand partner" class="footer_partners-img" />
+      <img src="images/home/partner-3.png" alt="third partner" class="footer_partners-img" />
+      <img src="images/home/partner-4.png" alt="foundation partner" class="footer_partners-img" />
+      <img src="images/home/partner-5.png" alt="foundation partner" class="footer_partners-img" />
+    </div>
+    <div class="footer_options">
+      <div class="footer__option footer__option-1">
+        <img src="images/home/number-1-circle.png" alt="option 1" class="footer__option-img">
+        <p class="footer__option-text">Choose your favourite cause</p>
+      </div>
+      <div class="footer__option footer__option-2">
+        <img src="images/home/number-2-circle.png" alt="option 2" class="footer__option-img">
+        <p class="footer__option-text">Donate the amount you like</p>
+      </div>
+      <div class="footer__option footer__option-3">
+        <img src="images/home/number-3-circle.png" alt="option 3" class="footer__option-img">
+        <p class="footer__option-text">Register to our website !</p>
+      </div>
+      <div class="footer__option footer__option-4">
+        <img src="images/home/number-4-circle.png" alt="option 4" class="footer__option-img">
+        <p class="footer__option-text">Stay tuned about causes</p>
+      </div>
+    </div>
+    <div class="footer__newsletter">
+      <h3 class="footer__newsletter-heading">NEWSLETTER</h3>
+      <input type="email" name="email" id="email" placeholder="Insert Your Email Here">
+      <a href="#" class="btn btn--green">SUBSCRIBE</a>
+    </div>
+  </footer>
+  <!-- Section "Footer" End -->
+   <!-- Section "sub-Footer" Start -->
+   <section class="sub-footer">
+     <p class="sub-footer__copytight">
+       © Copyright 2020 YouCode Team-Zoldyck - 5th CLASS
+     </p>
+     <div class="sub-footer__social">
+       <a href="#"><img src="" alt="facebook"></a>
+       <a href="#"><img src="" alt="twitter"></a>
+       <a href="#"><img src="" alt="google plus"></a>
+       <a href="#"><img src="" alt="Instagram"></a>
+     </div>
+   </section>
+    <!-- Section "sub-Footer" End -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          delay: 100, // values from 0 to 3000, with step 50ms
+          duration: 500, // values from 0 to 3000, with step 50ms
+          easing: 'ease', // default easing for AOS animations
+          once: false, // whether animation should happen only once - while scrolling down
+          mirror: true,
+        }
+      );
+    </script>
     <script src="js/main.min.js"></script>
     </body>
     </html>
