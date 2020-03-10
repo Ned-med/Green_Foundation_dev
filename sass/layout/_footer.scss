@@ -78,4 +78,11 @@
     &__copytight{
         color: $color-light-grey;
     }
+
+    &__social {
+        &-img {
+            width: 1.8rem;
+            margin: 0 1.5rem;
+        }
+    }
 }

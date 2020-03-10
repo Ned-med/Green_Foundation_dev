@@ -517,6 +517,9 @@ body {
   align-items: center; }
   .sub-footer__copytight {
     color: #a3a3a3; }
+  .sub-footer__social-img {
+    width: 1.8rem;
+    margin: 0 1.5rem; }
 
 .section-prob {
   display: grid;
@@ -790,11 +793,18 @@ body {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding: 6rem 4rem; }
+  @media screen and (max-width: 56.25em) {
+    .about {
+      grid-template-rows: 6fr 1fr 1fr; } }
   .about-header {
     grid-row: 1/2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
+    @media screen and (max-width: 56.25em) {
+      .about-header {
+        flex-direction: column;
+        align-items: center; } }
   .about__img {
     display: inline-block;
     width: 30rem;
@@ -804,8 +814,16 @@ body {
     position: relative;
     box-shadow: 0 1rem 3.5rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 3px; }
+    @media screen and (max-width: 56.25em) {
+      .about__img {
+        display: block;
+        width: 78rem;
+        height: 70rem; } }
     .about__img--1 {
       background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/team-1.jpg"); }
+      @media screen and (max-width: 56.25em) {
+        .about__img--1 {
+          margin-bottom: 3rem; } }
     .about__img--2 {
       background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/square-6.jpg"); }
     .about__img-title {
@@ -830,6 +848,11 @@ body {
     text-align: end;
     color: #727475;
     font-weight: 700; }
+    @media screen and (max-width: 56.25em) {
+      .about__heading {
+        text-align: center;
+        width: 70%;
+        margin-bottom: 2rem; } }
   .about__features {
     display: flex;
     flex-wrap: wrap;
