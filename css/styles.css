@@ -441,11 +441,13 @@ body {
   padding: 4rem 8rem;
   background-image: url("../images/home/parallax-7.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   @media screen and (max-width: 56.25em) {
     .footer {
       grid-template-columns: auto;
-      grid-template-rows: repeat(4, 1fr); } }
+      grid-template-rows: repeat(4, 1fr);
+      padding: 4rem; } }
   .footer__space {
     height: 1.5rem; }
   .footer__logo {
@@ -795,10 +797,14 @@ body {
 .about {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding: 6rem 4rem; }
+  padding: 6rem 4rem;
+  overflow: hidden; }
   @media screen and (max-width: 56.25em) {
     .about {
       grid-template-rows: 6fr 1fr 1fr; } }
+  @media screen and (max-width: 37.5em) {
+    .about {
+      grid-template-rows: 2fr 1fr 1fr; } }
   .about-header {
     grid-row: 1/2;
     display: flex;
@@ -810,8 +816,8 @@ body {
         align-items: center; } }
   .about__img {
     display: inline-block;
-    width: 30rem;
-    height: 27rem;
+    width: 40rem;
+    height: 37rem;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -822,6 +828,11 @@ body {
         display: block;
         width: 78rem;
         height: 70rem; } }
+    @media screen and (max-width: 37.5em) {
+      .about__img {
+        display: block;
+        width: 30rem;
+        height: 27rem; } }
     .about__img--1 {
       background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%), url("../images/home/team-1.jpg"); }
       @media screen and (max-width: 56.25em) {
@@ -860,12 +871,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 2.5rem 4rem 0rem 4rem; }
+    @media screen and (max-width: 37.5em) {
+      .about__features {
+        flex-direction: column; } }
     .about__features-container-1 {
       width: 50%;
       display: flex; }
+      @media screen and (max-width: 37.5em) {
+        .about__features-container-1 {
+          width: 100%; } }
     .about__features-container-2 {
       width: 50%;
       display: flex; }
+      @media screen and (max-width: 37.5em) {
+        .about__features-container-2 {
+          width: 100%; } }
     .about__features-icon {
       width: 7rem; }
     .about__features-text {

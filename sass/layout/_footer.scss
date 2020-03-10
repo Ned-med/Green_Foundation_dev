@@ -8,9 +8,11 @@
     background-image: url("../images/home/parallax-7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 @include responsive(tab-port) {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
+    padding: 4rem;
 }
 
     &__space {
@@ -48,7 +50,7 @@
     &__option {
         width: 30rem;
         display: flex;
-       margin-top: 2rem;
+        margin-top: 2rem;
         &-img {
             display: block;
             width: 2.5rem;
