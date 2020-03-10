@@ -232,7 +232,7 @@
 .slider {
     position: relative;
     padding-top: 20px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }.swiper-container {
     width: 100%;
   }
@@ -288,7 +288,8 @@
 	position: relative;
 	height: 100px;
 	margin-bottom: 10px;
-	display: flex;
+    display: flex;
+    justify-content: space-around;
 }
 
 .photobanner img {
