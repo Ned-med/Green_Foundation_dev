@@ -5,6 +5,7 @@
 
     &__logo-box {
         grid-column: 2/3;
+        padding: .6rem 0;
         @include responsive(tab-port) {
             position: absolute;
             top: 4.5rem;

@@ -42,8 +42,7 @@ html {
       font-size: 90%; } }
 
 body {
-  box-sizing: border-box;
-  padding-top: 3rem; }
+  box-sizing: border-box; }
 
 ::-moz-selection {
   background-color: #00b9a2;
@@ -235,7 +234,8 @@ body {
   align-items: center;
   grid-template-columns: 10rem repeat(4, 1fr) 10rem; }
   .navi__logo-box {
-    grid-column: 2/3; }
+    grid-column: 2/3;
+    padding: .6rem 0; }
     @media screen and (max-width: 56.25em) {
       .navi__logo-box {
         position: absolute;

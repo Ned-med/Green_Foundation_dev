@@ -1,9 +1,10 @@
 /**********************************************jumbotron**************************************/
 #jumbotron{
-    height: 250px;
-    background-image: url(../images/about/cause-2.jpg);
+    /* height: 250px; */
+    background-image: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.65) 100%),url(../images/about/parallax-8.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
     padding: 100px;
     overflow: hidden;
 }
@@ -164,7 +165,7 @@
     box-sizing: border-box;
     display: inline-block;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 0 5px 10px rgba(63, 62, 64, 0.8);
 }
 .article .container .box .imgBox{
@@ -239,6 +240,7 @@
   .swiper-container .titre2{
     text-align: center;
     background:#3f3e40;
+    margin-bottom: 1.5rem;
 }
 .swiper-container .titre2 h2{
     color: #fff;
@@ -286,7 +288,7 @@
 }
 .photobanner {
 	position: relative;
-	height: 100px;
+	/* height: 100px; */
 	margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
@@ -294,6 +296,7 @@
 
 .photobanner img {
   margin: 0px 25px;
+  width: 10rem;
 }
  .photobanner {
   animation: bannermove 20s linear infinite alternate-reverse;
