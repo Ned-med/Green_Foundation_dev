@@ -651,7 +651,7 @@ body {
       padding: 0 20%;
       font-weight: 300;
       font-size: 1.2rem;
-      text-align: justify; }
+      text-align: center; }
       @media screen and (max-width: 56.25em) {
         .section-prob .solution__des {
           font-size: 2rem; } }
