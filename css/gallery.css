@@ -184,3 +184,16 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+.projhead {
+  width: 100%;
+  background-color: #00a89c;
+  height: 10rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.projhead .projhead-title {
+  text-align: center;
+  color: #fff;
+}
