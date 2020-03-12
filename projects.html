@@ -115,7 +115,117 @@
   </body>
 </html>
 
-    <h1>Projects</h1>
+     <!---------------------------------------------- Section Gallery Failtre ----------------------------------------------------------------------------->
+     <section class="main">
+         <!-- --------------------------------------Container------------------------------------------------------------------------------------------- -->
+         <div class="projhead">
+          <h1 class="projhead-title">Gallery</h1>
+         </div>
+    <div class="container">
+       <!-- -------------------------------------------List-unstyled row---------------------------------------------------------------------------- -->
+      <ul class="list-unstyled row">
+        <li class="category active" data-class="all">ALL</li>
+        <li class="category" data-class="water">L'EAU</li>
+        <li class="category" data-class="plants">LES PLANTES</li>
+        <li class="category" data-class="forets">LES FORETS</li>
+        <li class="category" data-class="afrique">AFRIQUE</li>
+        <li class="category" data-class="animal">LES ANIMAUX</li>
+      </ul>
+    </div>
+    <!---------------------------------------------- -------------Image gallery ---------------------------------------------------------------------------------------------->
+    <!-- -----------------------------------------------------------container-fluid----------------------------------------------------------------------------------------------------- -->
+    <div class="container-fluid ">
+      <div class="catego images" data-class="animal">
+        <img src="images/gallery/img/1-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="plants">
+        <img src="images/gallery/img/2-01.jpg " alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="animal">
+        <img src="images/gallery/img/3-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="animal">
+        <img src="images/gallery/img/4-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="afrique">
+        <img src="images/gallery/img/5-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="animal">
+        <img src="images/gallery/img/6-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="afrique">
+        <img src="images/gallery/img/7-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="forets">
+        <img src="images/gallery/img/8-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="water">
+        <img src="images/gallery/img/9-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+      <div class="catego images" data-class="water">
+        <img src="images/gallery/img/10-01.jpg" alt="" />
+        <div class="caption">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---------------------------------------------------------------- Failter End -------------------------------------------------------------------------->
+  <!------------------------------------------------------------------Section Banner------------------------------------------------------------------------------------->
+       <section id="banner">
+  <!------------------------------------------------------------------Vedio------------------------------------------------------------------------->
+        <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" width="100%">
+            <source src="images/gallery/img/Nature.mp4" type="video/mp4" >
+                <source src="movie.webm" type="video/webm">Sorry, your browser does not support HTML5 video.</video> 
+    <!---------------------------------------------------------Newsletter---------------------------------------------------------------------->
+    <button class="open-button" onclick="openForm()">Subscribes</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+</section>
+
+
      
   <!-- Section "Footer" Start -->
   <footer class="footer">
@@ -197,7 +307,9 @@
         }
       );
     </script>
+     
     <script src="js/main.min.js"></script>
+    
 <script src="vendor/swiper/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -230,9 +342,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     
-
+    
 
     </body>
     </html>
+<script src="js/gallery.js"></script>
 
  
