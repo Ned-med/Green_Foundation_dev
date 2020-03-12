@@ -58,3 +58,10 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";}
