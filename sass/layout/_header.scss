@@ -1,6 +1,7 @@
 .header {
     display: grid;
     grid-template-columns: 10rem repeat(2, 1fr) 10rem;
+    overflow: hidden;
     @include responsive(tab-port) {
         grid-template-columns: 10rem 1fr 10rem;
         grid-row: repeat(2, 1fr);
